@@ -1,0 +1,27 @@
+{
+  "name": "findandeat",
+  "version": "1.0.0",
+  "description": "Find&Eat",
+  "main": "fetch.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pazikbartek/Find-Eat.git"
+  },
+  "author": "Bartosz Pazik",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pazikbartek/Find-Eat/issues"
+  },
+  "homepage": "https://github.com/pazikbartek/Find-Eat#readme",
+  "devDependencies": {
+    "@babel/core": "^7.2.2",
+    "@babel/preset-env": "^7.3.1",
+    "babel-loader": "^8.0.5",
+    "webpack": "^4.29.3",
+    "webpack-cli": "^3.2.3"
+  },
+  "dependencies": {}
+}
