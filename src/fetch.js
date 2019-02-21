@@ -4,9 +4,9 @@ class Fetch{
     console.log('nowy fetch z constructora')
   }
 
-  getCityID(){
+  getCityID(city){
     return new Promise((resolve, rejected) =>{ // calosc musi byc obietnica i dopiero gdy wykona sie podstawienie to bedzie resolve()
-      fetch("https://developers.zomato.com/api/v2.1/cities?q=warsaw", {
+      fetch(`https://developers.zomato.com/api/v2.1/cities?q=${city}`, {
         headers: {
           Accept: "application/json",
           "User-Key": "9bf30724352ee07c0f9fb3c65579d759"
@@ -22,15 +22,9 @@ class Fetch{
 
   }
 
-  getRestaurantsByCityID(){
-    let name;
-    let photo;
-    let klasa;
-    let price;
-    let opinion;
-    let votes;
+  getRestaurantsByCityID(sort, order){
 
-    fetch(`https://developers.zomato.com/api/v2.1/search?entity_id=${cityID}&entity_type=city&sort=cost&order=asc`, {
+    fetch(`https://developers.zomato.com/api/v2.1/search?entity_id=${this.cityID}&entity_type=city&sort=${sort}&order=${order}`, {
       headers: {
         Accept: "application/json",
         "User-Key": "9bf30724352ee07c0f9fb3c65579d759"
@@ -39,23 +33,62 @@ class Fetch{
     .then(resp => resp.json())
     .then((resp) => {
       console.log(resp.restaurants);
+      document.querySelector('#results').innerHTML="";
       resp.restaurants.forEach(restaurant => {
-        klasa = document.createElement('div');
-        klasa.className = "restaurant";
-        name = restaurant.restaurant.name;
-        photo = restaurant.restaurant.featured_image;
-        opinion = restaurant.restaurant.user_rating.aggregate_rating;
-        price = restaurant.restaurant.average_cost_for_two;
-        votes = restaurant.restaurant.user_rating.votes;
+        let data = document.createElement('div');
+        data.className = "data";
+        let box = document.createElement('div');
+        box.className = "box";
+        let phot = document.createElement('div');
+        phot.className = "photo";
+        let a = document.createElement('a');
 
-        klasa.innerHTML = name + "<br/>" + price + " " + opinion + " " + votes;
-        console.log(klasa);
+        let color;
+        let name = restaurant.restaurant.name;
+        let photo = restaurant.restaurant.thumb;
+        let opinion = restaurant.restaurant.user_rating.aggregate_rating;
+        let price = restaurant.restaurant.average_cost_for_two;
+        let votes = restaurant.restaurant.user_rating.votes;
+        let currency = restaurant.restaurant.currency;
+        let link = restaurant.restaurant.url;
+        
+        if (opinion<3){
+          color="rgb(241, 23, 23)";
+        }
+        else if(opinion>=3 && opinion <4){
+          color="rgb(247, 171, 30)";
+        }
+        else{
+          color="rgb(12, 168, 12)";
+        }
+
+        opinion+= "/5"
+
+        if(votes==0){
+          opinion="Unknown";
+          color="black";
+        }
+
+        data.innerHTML = `<span style="font-size:1.8vw; font-weight:600">${name}</span> <br/>  <br/>  Average cost for two: <b>${price}${currency}</b> <br/> Rating: <span style="color:${color}"><b> ${opinion} </b></span>  (${votes})`;
+        if(photo){
+          phot.style.backgroundImage = `url("${photo}")`;
+        }
+        else{
+          phot.style.backgroundImage = "url('blankk.png')";
+        }
+
+        a.href = link;
+        a.target= "_blank";
+        a.appendChild(phot);
+        box.appendChild(a);
+        box.appendChild(data);
+        document.querySelector('#results').appendChild(box);
 
       })
     });
 
   }
-  // getCityID().then(getRestaurantsByCityID);
+
 }
 
 export default Fetch;
