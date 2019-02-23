@@ -4,7 +4,6 @@
 .loader{
     z-index: 1000;
     background-color:orange;
-    opacity:0.95;
     min-width:97.7%;
     min-height:97%; 
     position:fixed;
@@ -36,7 +35,7 @@
     border-bottom-left-radius:  2%;
     border-bottom-right-radius:  2%;
     position:relative;
-    animation: start 1.2s 0.5s forwards;
+    animation: start 1.2s 1s forwards;
 }
 .searchBar{
     display:flex;
@@ -101,6 +100,10 @@
     width:15vw;
     min-height:25vh;
     background-size: cover;
+    transition: transform 0.2s;
+}
+.photo:hover{
+    transform: scale(1.04);
 }
 .data{
     width:25vw;
@@ -108,11 +111,10 @@
     margin-left:3vw;
     font-size:1.5vw;
 }
-
 @keyframes start{
-0% {left:0vw;}
-100%{left:37.5vw;}
-}
+    0% {left:0vw;}
+    100%{left:37.5vw;}
+    }
 @keyframes loader{
     0% {top:0;}
     50% {top:7vh;}

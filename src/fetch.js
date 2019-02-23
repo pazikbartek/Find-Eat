@@ -98,7 +98,14 @@ class Fetch{
         document.querySelector('#results').appendChild(box);
 
       })
+      
+      window.scrollTo({
+        top: window.screen.height *0.8,
+        behavior: 'smooth',
+      })
+
     });
+
 
   }
 
