@@ -14,8 +14,21 @@ class Fetch{
       })
       .then(resp => resp.json())
       .then((resp) => {
-          this.cityID = resp.location_suggestions[0].id;
-          resolve();
+          console.log(resp.location_suggestions.length);
+          if (resp.location_suggestions.length>0){
+            this.cityID = resp.location_suggestions[0].id;
+            resolve();
+          }
+          else{
+            let info = document.querySelector('.info');
+            info.style.display = "block";
+            setTimeout(()=>{
+              info.style.display="none";
+            },1500)
+
+            rejected("wystapil blad");
+          }
+          
       })
 
     })

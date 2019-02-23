@@ -1,11 +1,29 @@
 .container{
-    min-width: 95%;
-    margin-top:2vh;
+    min-width: 100%;
+}
+.menu{
+    background-image: url('pizza.jpg');
+    background-size: cover;
+    height: 97vh;
+    margin-bottom: 3vh;
+}
+.logo{
+    height:15vh;
+    font-size: 5vw;
+    color:white;
+    background-color:orange;
+    width:25%;
+    font-family: 'Acme', sans-serif;
+    text-align: center;
+    border-bottom-left-radius:  2%;
+    border-bottom-right-radius:  2%;
+    position:relative;
+    animation: start 1.2s 0.5s forwards;
 }
 .searchBar{
     display:flex;
-    margin-top:10vh;
-    margin-left:18vw;
+    margin-top:30vh;
+    margin-left:17.5vw;
     width:80%;
 }
 #city{
@@ -28,32 +46,19 @@
     height:8vh;
     font-size:1.3vw;
 }
-.menu{
-    background-image: url('pizza.jpg');
-    background-size: cover;
-    height: 90vh;
-    margin-bottom: 3vh;
-}
-.top{
-    color:orange;
-    background-color: rgba(255, 255, 255, 0.2);
-    width:70%;
-    margin-left:auto;
-    margin-right:auto;
-    text-align: center;
-    font-family: 'Francois One', sans-serif;
-    text-shadow: 2px 0 0 black, -2px 0 0 black, 0 2px 0 black, 0 -2px 0 black, 1px 1px black, -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black;
-}
-.logo{
-    height:20vh;
-    font-size: 7vw;
-}
-.text{
-    font-size:4vw;
-    margin-top:6vh;
-    height:18vh;
-    font-family: 'Istok Web', sans-serif;
-    color:rgb(255, 38, 0);
+.info{
+    width:32%;
+    min-height:6vh;
+    background-color: rgba(255, 255, 255, 0.9);
+    margin-left:17.5vw;
+    display:none;
+    font-size: 1.3vw;
+    color:rgb(235, 5, 5);
+    text-align:center;
+    border-radius:3%;
+    margin-top:0.5vh;
+    border: 0.08vw solid rgb(212, 212, 212);
+    padding-top:0.5vh;
 }
 #results{
     display:flex;
@@ -63,7 +68,7 @@
     margin-right: auto;
 }
 .box{
-    width:44vw;
+    width:46.5vw;
     min-height:25vh;
     display:flex;
     border: 0.08vw solid rgb(212, 212, 212);
@@ -84,4 +89,9 @@
     min-height:25vh;
     margin-left:3vw;
     font-size:1.5vw;
+}
+
+@keyframes start{
+0% {left:0vw;}
+100%{left:37.5vw;}
 }
