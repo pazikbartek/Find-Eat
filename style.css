@@ -1,6 +1,24 @@
 .container{
     min-width: 100%;
 }
+.loader{
+    z-index: 1000;
+    background-color:orange;
+    opacity:0.95;
+    min-width:97.7%;
+    min-height:97%; 
+    position:fixed;
+    color:white;
+    text-align:center;
+    padding-top:35vh;
+    font-size:5.5vw;
+    margin-left:auto;
+    margin-right:auto;
+}
+.loader i{
+    position:relative;
+    animation: loader 1s infinite;
+}
 .menu{
     background-image: url('pizza.jpg');
     background-size: cover;
@@ -94,4 +112,9 @@
 @keyframes start{
 0% {left:0vw;}
 100%{left:37.5vw;}
+}
+@keyframes loader{
+    0% {top:0;}
+    50% {top:7vh;}
+    100% {top:0;}
 }
