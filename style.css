@@ -18,6 +18,14 @@
     position:relative;
     animation: loader 1s infinite;
 }
+.searchLoader{
+    z-index: 1000;
+    background-color:rgba(255, 255, 255, 0.15);
+    min-width:97.7%;
+    min-height:97%; 
+    position:fixed;
+    display:none;
+}
 .menu{
     background-image: url('pizza.jpg');
     background-size: cover;

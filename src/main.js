@@ -11,8 +11,12 @@ let search = new Search();
 let fetch = new Fetch();
 
 document.querySelector('#button').addEventListener('click', function(){
+    document.querySelector('.searchLoader').style.display = "block";
     fetch.getCityID(search.getData()[0])
     .then(res => fetch.getRestaurantsByCityID(search.getData()[1], search.getData()[2]))
-    .catch(err => console.log(err));
+    .catch(err => {
+        console.log(err)
+        document.querySelector('.searchLoader').style.display = "none";
+    });
     })
 

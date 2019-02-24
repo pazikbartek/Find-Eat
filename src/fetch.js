@@ -98,7 +98,7 @@ class Fetch{
         document.querySelector('#results').appendChild(box);
 
       })
-      
+      document.querySelector('.searchLoader').style.display = "none";
       window.scrollTo({
         top: window.screen.height *0.8,
         behavior: 'smooth',
