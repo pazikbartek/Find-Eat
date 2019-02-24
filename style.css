@@ -181,7 +181,7 @@
     }
 }
 
-@media screen and (max-width:500px){
+@media screen and (max-width:400px){
     .logo{
         height:9vh;
         font-size: 8.4vw;
@@ -202,7 +202,7 @@
         width:17%;
     }
     #button{
-        width:29%;
-        font-size:2.8vw;
+        width:37%;
+        font-size:2.9vw;
     }
 }
