@@ -128,3 +128,81 @@
     50% {top:7vh;}
     100% {top:0;}
 }
+
+@media screen and (max-width:930px){
+    .logo{
+        height:12vh;
+        font-size: 6.7vw;
+        width:35%;
+        animation: none;
+        left:32vw;
+    }
+    .searchBar{
+        margin-left:12vw;
+    }
+    #city{
+        width:40%;
+    }
+    #order{
+        width:17%;
+    }
+    #sort{
+        width:17%;
+    }
+    #button{
+        width:22%;
+        font-size:2vw;
+    }
+}
+
+@media screen and (max-width:600px){
+    .logo{
+        height:10vh;
+        font-size: 7.6vw;
+        width:40%;
+        animation: none;
+        left:29vw;
+    }
+    .searchBar{
+        margin-left:12vw;
+    }
+    #city{
+        width:40%;
+    }
+    #order{
+        width:17%;
+    }
+    #sort{
+        width:17%;
+    }
+    #button{
+        width:27%;
+        font-size:2.5vw;
+    }
+}
+
+@media screen and (max-width:500px){
+    .logo{
+        height:9vh;
+        font-size: 8.4vw;
+        width:45%;
+        animation: none;
+        left:26vw;
+    }
+    .searchBar{
+        margin-left:10vw;
+    }
+    #city{
+        width:40%;
+    }
+    #order{
+        width:17%;
+    }
+    #sort{
+        width:17%;
+    }
+    #button{
+        width:29%;
+        font-size:2.8vw;
+    }
+}
