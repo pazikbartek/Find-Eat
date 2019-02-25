@@ -109,6 +109,7 @@
     min-height:25vh;
     background-size: cover;
     transition: transform 0.2s;
+    background-position: center center;
 }
 .photo:hover{
     transform: scale(1.04);
@@ -158,16 +159,22 @@
 }
 
 
-@media screen and (max-width:1000px){
+@media screen and (max-width:1050px){
     .box{
         min-height:20vh;
+        width:90%;
+        margin-left:auto;
+        margin-right:auto;
     }
     .photo{
         min-height:20vh;
+        width:20vw;
     }
     .data{
         min-height:20vh;
         font-size:2vw;
+        width:35vw;
+        margin-left:12vw;
     }
     .logotext{
         font-size:2.3vw;
@@ -190,19 +197,13 @@
 @media screen and (max-width:651px){
     .box{
         min-height:15vh;
-        width:90%;
-        margin-left:auto;
-        margin-right:auto;
     }
     .photo{
         min-height:15vh;
-        width:20vw;
     }
     .data{
         min-height:15vh;
         font-size:2.4vw;
-        width:35vw;
-        margin-left:12vw;
     }
     .logotext{
         font-size:2.7vw;
@@ -279,7 +280,6 @@
         min-height: 12vh;
     }
     .photo{
-        width:23vw;
         min-height: 12vh;
     }
     .data{
