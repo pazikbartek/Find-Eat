@@ -119,6 +119,11 @@
     margin-left:3vw;
     font-size:1.5vw;
 }
+.logotext{
+    font-size:1.8vw; 
+    font-weight:600;
+}
+
 @keyframes start{
     0% {left:0vw;}
     100%{left:37.5vw;}
@@ -140,9 +145,6 @@
     .searchBar{
         margin-left:12vw;
     }
-    #city{
-        width:40%;
-    }
     #order{
         width:17%;
     }
@@ -152,6 +154,58 @@
     #button{
         width:22%;
         font-size:2vw;
+    }
+}
+
+
+@media screen and (max-width:1000px){
+    .box{
+        min-height:20vh;
+    }
+    .photo{
+        min-height:20vh;
+    }
+    .data{
+        min-height:20vh;
+        font-size:2vw;
+    }
+    .logotext{
+        font-size:2.3vw;
+    }
+}
+
+@media screen and (max-width:750px){
+    .box{
+        min-height:17vh;
+    }
+    .photo{
+        min-height:17vh;
+    }
+    .data{
+        min-height:17vh;
+        font-size:2.1vw;
+    }
+}
+
+@media screen and (max-width:651px){
+    .box{
+        min-height:15vh;
+        width:90%;
+        margin-left:auto;
+        margin-right:auto;
+    }
+    .photo{
+        min-height:15vh;
+        width:20vw;
+    }
+    .data{
+        min-height:15vh;
+        font-size:2.4vw;
+        width:35vw;
+        margin-left:12vw;
+    }
+    .logotext{
+        font-size:2.7vw;
     }
 }
 
@@ -166,9 +220,6 @@
     .searchBar{
         margin-left:12vw;
     }
-    #city{
-        width:40%;
-    }
     #order{
         width:17%;
     }
@@ -182,11 +233,24 @@
     .loader{
         min-width:95%;
     }
+
+}
+@media screen and (max-width:530px){
+
+    .photo{
+        width:23vw;
+    }
+    .data{
+        font-size:2.7vw;
+    }
+    .logotext{
+        font-size:2.9vw;
+    }
 }
 
 @media screen and (max-width:400px){
     .logo{
-        height:9vh;
+        height:8vh;
         font-size: 8.4vw;
         width:45%;
         animation: none;
@@ -196,13 +260,13 @@
         margin-left:10vw;
     }
     #city{
-        width:40%;
+        width:35%;
     }
     #order{
-        width:17%;
+        width:23%;
     }
     #sort{
-        width:17%;
+        width:23%;
     }
     #button{
         width:37%;
@@ -210,5 +274,19 @@
     }
     .loader{
         min-width:92.3%;
+    }
+    .box{
+        min-height: 12vh;
+    }
+    .photo{
+        width:23vw;
+        min-height: 12vh;
+    }
+    .data{
+        font-size:2.9vw;
+        min-height: 12vh;
+    }
+    .logotext{
+        font-size:3.1vw;
     }
 }

@@ -82,7 +82,7 @@ class Fetch{
           color="black";
         }
 
-        data.innerHTML = `<span style="font-size:1.8vw; font-weight:600">${name}</span> <br/>  <br/>  Average cost for two: <b>${price}${currency}</b> <br/> Rating: <span style="color:${color}"><b> ${opinion} </b></span>  (${votes})`;
+        data.innerHTML = `<span class="logotext">${name}</span> <br/>  <br/>  Average cost for two: <b>${price}${currency}</b> <br/> Rating: <span style="color:${color}"><b> ${opinion} </b></span>  (${votes})`;
         if(photo){
           phot.style.backgroundImage = `url("${photo}")`;
         }
