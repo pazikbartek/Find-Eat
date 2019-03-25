@@ -35,6 +35,7 @@
 .logo{
     height:15vh;
     font-size: 5vw;
+    left:37.5vw;
     color:white;
     background-color:orange;
     width:25%;
@@ -43,7 +44,8 @@
     border-bottom-left-radius:  2%;
     border-bottom-right-radius:  2%;
     position:relative;
-    animation: start 1.2s 1s forwards;
+    animation: start 1.3s forwards;
+    line-height: 15vh;
 }
 .searchBar{
     display:flex;
@@ -84,6 +86,7 @@
     margin-top:0.5vh;
     border: 0.08vw solid rgb(212, 212, 212);
     padding-top:0.5vh;
+    line-height: 4.5vh;
 }
 #results{
     display:flex;
@@ -91,6 +94,13 @@
     width:100%;
     margin-left:auto;
     margin-right: auto;
+}
+footer{
+    position:fixed;
+    bottom:0;
+    left:50%;
+    font-size:1.2vw;
+    transform: translateX(-50%);
 }
 .box{
     width:46.5vw;
@@ -126,8 +136,8 @@
 }
 
 @keyframes start{
-    0% {left:0vw;}
-    100%{left:37.5vw;}
+    0% {opacity:0;}
+    100%{opacity:1;}
     }
 @keyframes loader{
     0% {top:0;}
@@ -142,9 +152,14 @@
         width:35%;
         animation: none;
         left:32vw;
+        line-height: 12vh;
     }
     .searchBar{
         margin-left:12vw;
+    }
+    .info{
+        margin-left:12vw;
+        font-size:1.6vw;
     }
     #order{
         width:17%;
@@ -155,6 +170,9 @@
     #button{
         width:22%;
         font-size:2vw;
+    }
+    footer{
+        font-size: 1.5vw
     }
 }
 
@@ -217,6 +235,7 @@
         width:40%;
         animation: none;
         left:29vw;
+        line-height: 10vh;
     }
     .searchBar{
         margin-left:12vw;
@@ -233,6 +252,9 @@
     }
     .loader{
         min-width:95%;
+    }
+    footer{
+        font-size: 1.8vw
     }
 
 }
@@ -256,9 +278,15 @@
         width:45%;
         animation: none;
         left:26vw;
+        line-height: 8vh;
     }
     .searchBar{
         margin-left:10vw;
+    }
+    .info{
+        margin-left:10vw;
+        font-size:2vw;
+        width:23%;
     }
     #city{
         width:35%;
@@ -288,5 +316,8 @@
     }
     .logotext{
         font-size:3.1vw;
+    }
+    footer{
+        font-size: 2vw
     }
 }

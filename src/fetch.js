@@ -1,11 +1,10 @@
 class Fetch{
   constructor(){
     this.cityID;
-    console.log('nowy fetch z constructora')
   }
 
   getCityID(city){
-    return new Promise((resolve, rejected) =>{ // calosc musi byc obietnica i dopiero gdy wykona sie podstawienie to bedzie resolve()
+    return new Promise((resolve, rejected) =>{ 
       fetch(`https://developers.zomato.com/api/v2.1/cities?q=${city}`, {
         headers: {
           Accept: "application/json",
@@ -14,7 +13,6 @@ class Fetch{
       })
       .then(resp => resp.json())
       .then((resp) => {
-          console.log(resp.location_suggestions.length);
           if (resp.location_suggestions.length>0){
             this.cityID = resp.location_suggestions[0].id;
             resolve();
@@ -45,7 +43,7 @@ class Fetch{
     })
     .then(resp => resp.json())
     .then((resp) => {
-      console.log(resp.restaurants);
+
       document.querySelector('#results').innerHTML="";
       resp.restaurants.forEach(restaurant => {
         let data = document.createElement('div');
@@ -83,12 +81,8 @@ class Fetch{
         }
 
         data.innerHTML = `<span class="logotext">${name}</span> <br/>  <br/>  Average cost for two: <b>${price}${currency}</b> <br/> Rating: <span style="color:${color}"><b> ${opinion} </b></span>  (${votes})`;
-        if(photo){
-          phot.style.backgroundImage = `url("${photo}")`;
-        }
-        else{
-          phot.style.backgroundImage = "url('blankk.png')";
-        }
+
+        photo ? phot.style.backgroundImage = `url("${photo}")` : phot.style.backgroundImage = "url('blankk.png')";
 
         a.href = link;
         a.target= "_blank";
@@ -99,6 +93,10 @@ class Fetch{
 
       })
       document.querySelector('.searchLoader').style.display = "none";
+      const footer = document.querySelector('footer')
+      footer.style.position = "relative";
+      footer.style.left = "90%";
+      
       window.scrollTo({
         top: window.screen.height *0.8,
         behavior: 'smooth',
