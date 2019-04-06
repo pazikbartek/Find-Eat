@@ -1,8 +1,8 @@
 .loader{
     z-index: 1000;
     background-color:orange;
-    min-width:97.7%;
-    min-height:97%; 
+    min-width:100%;
+    min-height:100%; 
     position:fixed;
     color:white;
     text-align:center;
@@ -18,8 +18,8 @@
 .searchLoader{
     z-index: 1000;
     background-color:rgba(255, 255, 255, 0.15);
-    min-width:97.7%;
-    min-height:97%; 
+    min-width:100%;
+    min-height:100%; 
     position:fixed;
     display:none;
 }
@@ -27,7 +27,7 @@
     background-image: url('pizza.jpg');
     background-size: cover;
     height: 97vh;
-    margin-bottom: 3vh;
+    margin-bottom:3vh;
 }
 .logo{
     height:15vh;
@@ -88,28 +88,25 @@
 #results{
     display:flex;
     flex-wrap:wrap;
-    width:100%;
-    margin-left:auto;
-    margin-right: auto;
 }
-footer{
+.footer{
     position:fixed;
     bottom:0;
     left:50%;
     font-size:1.2vw;
     transform: translateX(-50%);
-    background-color:rgb(14, 14, 14);
+    background-color:rgb(17, 17, 17);
     color:white;
     width:100%;
     text-align:center;
 }
 .box{
-    width:46.5vw;
+    width:45.5vw;
     min-height:25vh;
     display:flex;
     border: 0.08vw solid rgb(212, 212, 212);
     border-radius: 1.2%;
-    margin-left:1.2vw;
+    margin-left:2.4vw;
     margin-bottom: 3vh;
     padding: 0.4vw;
     background-color: rgb(248, 248, 248);
@@ -195,8 +192,8 @@ footer{
     .logotext{
         font-size:2.3vw;
     }
-    footer{
-        opacity:0;
+    .footer{
+        display:none;
     }
 }
 
@@ -258,7 +255,9 @@ footer{
 
 }
 @media screen and (max-width:530px){
-
+    .menu{
+        height:95vh;
+    }
     .photo{
         width:23vw;
     }
@@ -271,9 +270,6 @@ footer{
 }
 
 @media screen and (max-width:420px){
-    .menu{
-        height: 95vh;
-    }
     .logo{
         height:8vh;
         font-size: 8.4vw;
