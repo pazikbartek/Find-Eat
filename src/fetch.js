@@ -95,7 +95,6 @@ class Fetch{
       document.querySelector('.searchLoader').style.display = "none";
       const footer = document.querySelector('footer')
       footer.style.position = "relative";
-      footer.style.left = "90%";
       
       window.scrollTo({
         top: window.screen.height *0.8,

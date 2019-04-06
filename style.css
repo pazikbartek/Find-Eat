@@ -1,6 +1,3 @@
-.container{
-    min-width: 100%;
-}
 .loader{
     z-index: 1000;
     background-color:orange;
@@ -101,6 +98,10 @@ footer{
     left:50%;
     font-size:1.2vw;
     transform: translateX(-50%);
+    background-color:rgb(14, 14, 14);
+    color:white;
+    width:100%;
+    text-align:center;
 }
 .box{
     width:46.5vw;
@@ -171,9 +172,6 @@ footer{
         width:22%;
         font-size:2vw;
     }
-    footer{
-        font-size: 1.5vw
-    }
 }
 
 
@@ -197,6 +195,9 @@ footer{
     .logotext{
         font-size:2.3vw;
     }
+    footer{
+        opacity:0;
+    }
 }
 
 @media screen and (max-width:750px){
@@ -210,6 +211,7 @@ footer{
         min-height:17vh;
         font-size:2.1vw;
     }
+
 }
 
 @media screen and (max-width:651px){
@@ -253,9 +255,6 @@ footer{
     .loader{
         min-width:95%;
     }
-    footer{
-        font-size: 1.8vw
-    }
 
 }
 @media screen and (max-width:530px){
@@ -272,6 +271,9 @@ footer{
 }
 
 @media screen and (max-width:420px){
+    .menu{
+        height: 95vh;
+    }
     .logo{
         height:8vh;
         font-size: 8.4vw;
@@ -317,7 +319,5 @@ footer{
     .logotext{
         font-size:3.1vw;
     }
-    footer{
-        font-size: 2vw
-    }
+
 }
