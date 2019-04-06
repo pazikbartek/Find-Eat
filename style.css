@@ -249,10 +249,6 @@
         width:27%;
         font-size:2.5vw;
     }
-    .loader{
-        min-width:95%;
-    }
-
 }
 @media screen and (max-width:530px){
     .menu{
@@ -299,9 +295,6 @@
         width:37%;
         font-size:2.9vw;
     }
-    .loader{
-        min-width:92.3%;
-    }
     .box{
         min-height: 12vh;
     }
@@ -315,5 +308,9 @@
     .logotext{
         font-size:3.1vw;
     }
+    .loader{
+        font-size:6vw;
+    }
+
 
 }
