@@ -26,8 +26,8 @@
 .menu{
     background-image: url('pizza.jpg');
     background-size: cover;
-    height: 97vh;
-    margin-bottom:3vh;
+    height: 100vh;
+    /* margin-bottom:3vh; */
 }
 .logo{
     height:15vh;
@@ -99,6 +99,7 @@
     color:white;
     width:100%;
     text-align:center;
+    height:3vh;
 }
 .box{
     width:45.5vw;
@@ -251,9 +252,7 @@
     }
 }
 @media screen and (max-width:530px){
-    .menu{
-        height:95vh;
-    }
+
     .photo{
         width:23vw;
     }
@@ -270,7 +269,6 @@
         height:8vh;
         font-size: 8.4vw;
         width:45%;
-        animation: none;
         left:26vw;
         line-height: 8vh;
     }

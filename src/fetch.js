@@ -95,6 +95,7 @@ class Fetch{
       document.querySelector('.searchLoader').style.display = "none";
       const footer = document.querySelector('.footer')
       footer.style.position = "relative";
+      document.querySelector('.menu').style.marginBottom = "3vh";
       
       window.scrollTo({
         top: window.screen.height *0.8,
